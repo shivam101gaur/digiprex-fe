@@ -1,0 +1,22 @@
+.cont{
+    margin: auto;
+    height: 90%;
+    width: 98.5%;
+
+    border: solid 1px rgb(169, 167, 167) ;
+    border-radius: 2.5px;
+    /* height: 100% !important; */
+}
+.fileterCont{
+    margin: auto;
+    width: 98.5%;
+}
+
+
+tr{
+    cursor: pointer;
+    transition: 50ms ease-in-out;
+}
+tr:hover{
+    background-color: rgba(29, 185, 246, 0.651);
+}

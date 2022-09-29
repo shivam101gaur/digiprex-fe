@@ -1,0 +1,71 @@
+<div class="columns fileterCont">
+    <div class="column">
+        <input [(ngModel)]="cartToken" class="input is-small" type="text" placeholder="Cart Token">
+    </div>
+    <!-- <div class="column">
+        <input [(ngModel)]="phone" class="input is-small" type="text" placeholder="Phone">
+    </div> -->
+    <div class="column">
+        <input [(ngModel)]="email" class="input is-small" type="text" placeholder="E-mail">
+    </div>
+    <div class="column">
+        <button (click)="getMessages()" [disabled]="!(phone||email||cartToken)" class="button is-primary is-small">
+            <span class="icon">
+              <i class="fa fa-search"></i>
+            </span>
+            <span>Search</span>
+          </button>
+    </div>
+</div>
+<div  class="cont columns is-multiline">
+
+
+<div class="column  is-full">
+    <table class="table is-fullwidth">
+        <thead>
+            <th>
+                #
+            </th>
+            <th>
+                Cart Token
+            </th>
+            <th>
+                Content
+             </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                E-Mail
+            </th>
+            <th>
+                Sent at
+            </th>
+           
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of messageList;let i=index" >
+                <td>
+                    {{i+1}}.
+                </td>
+                <td>
+                 {{item.cart_token}}
+                </td>
+                <td>
+                 {{item.content}}
+                </td>
+                <td>
+                 {{item.phone}}
+                </td>
+                <td>
+                 {{item.email}}
+                </td>
+                <td>
+                 {{item.time_sent|date:'medium'}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
